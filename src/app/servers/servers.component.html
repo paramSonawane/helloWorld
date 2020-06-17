@@ -1,5 +1,11 @@
 <p>I am in the SERVERS component</p>
-
+<input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+>
+<!-- $event gives information about which event triggered the function
+and data it collected from that event -->
 <!-- Property binding (binding the attribute to the property of component) -->
 <button
     class="btn btn-primary"
