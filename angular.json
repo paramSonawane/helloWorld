@@ -23,7 +23,9 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            //you can add custom css in here like bootstrap
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "scripts": []
