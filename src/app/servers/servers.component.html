@@ -1,4 +1,17 @@
 <p>I am in the SERVERS component</p>
+
+<!-- Property binding (binding the attribute to the property of component) -->
+<button
+    class="btn btn-primary"
+    [disabled]="!allowNewServer">
+    Add Server
+</button>
+
+<p>The add server button bound to allowNewServer property of servers component and has value {{allowNewServer}}</p> <!-- string interpolation -->
+
+<!-- property binding and string interpolations can be interchanged but
+DO NOT mix both... use either of them. -->
+
 <div class="app-server"></div>
 <div class="app-server"></div>
 <div class="app-server"></div>
