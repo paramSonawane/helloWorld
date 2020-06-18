@@ -47,7 +47,4 @@ requires ng-template(component Directive) as to display the element for the else
 <!-- Unlike structural directives changing the entire DOM structure,
 the Attribute directives only change the element on which it is placed -->
 
-
-<div class="app-server"></div>
-<div class="app-server"></div>
-<div class="app-server"></div>
+<div class="app-server"*ngFor="let server of servers"></div>

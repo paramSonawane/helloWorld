@@ -5,7 +5,7 @@ import { Component} from '@angular/core';
     templateUrl : './server.component.html' //user backtics `<your html code></>` to add inline html code
 })
 export class serverComponent{
-    serverID: number = 10;
+    serverID: number = Math.floor(Math.random()*10);
     serverStatus: string = Math.random() > 0.5 ? 'Online' : 'Offline';
 
     getServerStatus(){

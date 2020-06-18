@@ -5,6 +5,11 @@
     <!-- Can also use ternary operator inside {{}} -->
 
 <!-- *******************Attribute Directives******************* -->
-<p [ngStyle]="{backgroundColor : getColor()}">Server with ID {{ serverID }} is {{ getServerStatus() }} </p>
+<p
+    [ngStyle]="{backgroundColor : getColor()}"
+    [ngClass]="{online: serverStatus === 'Online'}"
+>
+    Server with ID {{ serverID }} is {{ getServerStatus() }}
+</p>
 
 <hr>
