@@ -26,9 +26,13 @@ Property Binding []
 Event Binding ()
 String interpolation {}
 Two way binding [()]
+Structural Directive *
 
 -->
-<p>{{serverCreation}}!</p>
+<p *ngIf="serverCreated">New Server Created; name is : {{serverName}}</p>
+<!-- This is structural directive which directly changes the DOM
+here if the ngIf condition is met then it will execute/show that HTML element -->
+
 <div class="app-server"></div>
 <div class="app-server"></div>
 <div class="app-server"></div>
