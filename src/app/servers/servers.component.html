@@ -1,3 +1,12 @@
+<!--
+Property Binding []
+Event Binding ()
+String interpolation {}
+Two way binding [()]
+Structural Directive *
+Local Reference #
+-->
+
 <p>I am in the SERVERS component</p>
 <input
     type="text"
@@ -16,22 +25,22 @@ and data it collected from that event -->
     Add Server
 </button>
 
-<p>The add server button bound to allowNewServer property of servers component and has value {{allowNewServer}}</p> <!-- string interpolation -->
-
+<p>The 'Add Server' button bound to 'allowNewServer' property of servers component and has value <b>{{allowNewServer}}</b></p> <!-- string interpolation -->
 <!-- property binding and string interpolations can be interchanged but
 DO NOT mix both... use either of them. -->
 
-<!--
-Property Binding []
-Event Binding ()
-String interpolation {}
-Two way binding [()]
-Structural Directive *
 
--->
-<p *ngIf="serverCreated">New Server Created; name is : {{serverName}}</p>
+<!-- <p *ngIf="serverCreated">New Server Created; name is : {{serverName}}</p> -->
 <!-- This is structural directive which directly changes the DOM
-here if the ngIf condition is met then it will execute/show that HTML element -->
+    here if the ngIf condition is met then it will execute/show that HTML element -->
+
+<p *ngIf="serverCreated; else noServer">New Server Created; name is : {{serverName}}</p>
+<ng-template #noServer>
+    <p>No Server was created!!</p>
+</ng-template>
+<!-- This is if with else
+requires ng-template(component Directive) as to display the element for the else part -->
+
 
 <div class="app-server"></div>
 <div class="app-server"></div>
