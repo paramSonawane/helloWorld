@@ -30,6 +30,8 @@ and data it collected from that event -->
 DO NOT mix both... use either of them. -->
 
 
+<!-- ************************Structural Directives************************ -->
+
 <!-- <p *ngIf="serverCreated">New Server Created; name is : {{serverName}}</p> -->
 <!-- This is structural directive which directly changes the DOM
     here if the ngIf condition is met then it will execute/show that HTML element -->
@@ -40,6 +42,10 @@ DO NOT mix both... use either of them. -->
 </ng-template>
 <!-- This is if with else
 requires ng-template(component Directive) as to display the element for the else part -->
+
+<!-- ************************Attribute Directives************************ -->
+<!-- Unlike structural directives changing the entire DOM structure,
+the Attribute directives only change the element on which it is placed -->
 
 
 <div class="app-server"></div>
